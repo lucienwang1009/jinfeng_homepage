@@ -7,7 +7,7 @@ notifications:
 
 addons:
   ssh_known_hosts:
-    - ${HOST}
+    - 47.102.196.249
 
 cache:
   directories:
@@ -22,13 +22,13 @@ install:
   - yarn
 
 before_script:
-  - echo -e "Host ${HOST}\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host 47.102.196.249\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 script:
   - yarn build
 
 deploy:
   provider: script
-  script: "sshpass '-p ${PASSWORD}' scp -r ./dist ${USER}@${HOST}:/var/www"
+  script: "sshpass '-p ${PASSWORD}' scp -r ./dist root@47.102.196.249:/var/www"
   on:
     branch: master
