@@ -44,7 +44,7 @@ class Header extends React.Component {
             {subItem.map(($item, ii) => {
               const { children: childItem } = $item;
               const child = childItem.href ? (
-                <a {...childItem}>
+                <a {...childItem} >
                   {childItem.children.map(getChildrenToRender)}
                 </a>
               ) : (
