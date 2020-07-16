@@ -2,13 +2,6 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
-// module.exports = {
-//   email: {//邮件配置
-//       service: '1416287214@qq.com',
-//       user: '24k纯帅忠忠',
-//       pass: 'osz196632',
-//   }
-// }
 const { REACT_APP_ENV } = process.env;
 export default defineConfig({
   hash: true,

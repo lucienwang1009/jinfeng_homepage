@@ -17,10 +17,7 @@ export const Nav00DataSource = {
   logo: {
     className: 'header0-logo',
     children: "logo.png",
-
-
   },
-
   Menu: {
     className: 'header0-menu',
     children: [
@@ -57,7 +54,6 @@ export const Nav00DataSource = {
                 <Link 
                   to="Teams0_0"
                   smooth={true}
-                  
                   >
                 <span>
                   <a color='red'>客户介绍</a>
@@ -73,14 +69,13 @@ export const Nav00DataSource = {
         name: 'item2',
         className: 'header0-item',
         children: {
-          href: '#Teams1_0',
+        //  href: '#Teams1_0',
           children: [
             {
               children: (
                 <Link 
                   to="Teams0_0"
                   smooth={true}
-                  
                   >
                 <span>
                   <a color='red'>团队介绍</a>
@@ -96,14 +91,13 @@ export const Nav00DataSource = {
       name: 'item3',
       className: 'header0-item',
       children: {
-        href: '#',
+       // href: '#',
         children: [
           {
             children: (
               <Link 
                   to="Teams0_0"
                   smooth={true}
-                  
                   >
                 <span>
                   <a color='red'>联系我们</a>
@@ -336,81 +330,7 @@ export const Teams00DataSource = {
     ],
   },
 };
-// export const Content50DataSource = {
-//   wrapper: { className: 'home-page-wrapper content5-wrapper' },
-//   page: { className: 'home-page content5 kcb94y2epq-editor_css' },
-//   OverPack: { playScale: 0.3, className: '' },
-//   titleWrapper: {
-//     className: 'title-wrapper',
-//     children: [
-//       {
-//         name: 'title',
-//         children: (
-//           <span>
-//             <p>客户介绍</p>
-//           </span>
-//         ),
-//         className: 'title-h1',
-//       },
-//       {
-//         name: 'content',
-//         className: 'title-content',
-//         children: (
-//           <span>
-//             <p></p>
-//           </span>
-//         ),
-//       },
-//     ],
-//   },
-//   block: {
-//     className: 'content5-img-wrapper',
-//     gutter: 32,
-//     children: [
-//       {
-//         name: 'block1',
-//         className: 'block',
-//         md: 6,
-//         xs: 12,
-//         children: {
-//           wrapper: { className: 'content5-block-content' },
-//           img: {
-//             children:
-//               'partners/中国中车.jpg',
-//           },
-//           content: {
-//             children: (
-//               <span>
-//                 <p>&nbsp;中国中车</p>
-//               </span>
-//             ),
-//           },
-//         },
-//       },
-//       {
-//         name: 'block2',
-//         className: 'block',
-//         md: 6,
-//         xs: 12,
-//         children: {
-//           wrapper: { className: 'content5-block-content' },
-//           img: {
-//             children:
-//               'partners/Binance.jpg',
-//           },
-//           content: {
-//             children: (
-//               <span>
-//                 <p>&nbsp;全球最大的区块链公司-Binance(币安)</p>
-//               </span>
-//             ),
-//           },
-//         },
-//       },
 
-//     ],
-//   },
-// };
 export const Teams10DataSource = {
   wrapper: { className: 'home-page-wrapper teams1-wrapper' },
   page: { className: 'home-page teams1' },

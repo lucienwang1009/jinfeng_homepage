@@ -5,16 +5,13 @@ import { enquireScreen } from 'enquire-js';
 import Nav0 from './Nav0';
 import Banner0 from './Banner0';
 import Content0 from './Content0';
-//import Content5 from './Content5';
 import Teams1 from './Teams1';
 import Teams0 from './Teams0';
 import Footer1 from './Footer1';
-
 import {
   Nav00DataSource,
   Banner01DataSource,
   Content00DataSource,
- // Content50DataSource,
   Teams10DataSource,
   Teams00DataSource,
   Footer10DataSource,
@@ -81,24 +78,14 @@ export default class Home extends React.Component {
         dataSource={Teams00DataSource}
         isMobile={this.state.isMobile}
       />,
-      // <Content5
-      //   id="Content5_0"
-      //   key="Content5_0"
-      //   dataSource={Content50DataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
+     
       <Teams1
         id="Teams1_0"
         key="Teams1_0"
         dataSource={Teams10DataSource}
         isMobile={this.state.isMobile}
       />,
-      // <Content3
-      //   id="Content3_0"
-      //   key="Content3_0"
-      //   dataSource={Content30DataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
+     
       <Footer1
         id="Footer1_0"
         key="Footer1_0"

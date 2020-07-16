@@ -23,6 +23,7 @@ class Teams1 extends React.PureComponent {
     const listChildren = this.getBlockChildren(dataSource.block.children);
     return (
       <div {...props} {...dataSource.wrapper}>
+        <div {...dataSource.page}>
         <div {...dataSource.titleWrapper}>
           {dataSource.titleWrapper.children.map(getChildrenToRender)}
         </div>
@@ -37,6 +38,7 @@ class Teams1 extends React.PureComponent {
             {listChildren}
           </QueueAnim>
         </OverPack>
+      </div>
       </div>
     );
   }
