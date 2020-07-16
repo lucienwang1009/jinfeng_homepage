@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+- 10
+notifications:
+  email: false
+addons:
+  ssh_known_hosts:
+  - 47.102.196.249
+cache:
+  directories:
+  - node_modules
+  yarn: true
+before_install:
+- openssl aes-256-cbc -K $encrypted_67275b86e318_key -iv $encrypted_67275b86e318_iv
+  -in .travis/deploy_rsa.enc -out .travis/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- cp .travis/deploy_rsa ~/.ssh/deploy_rsa
+- chmod 600 ~/.ssh/deploy_rsa
+- ssh-add ~/.ssh/deploy_rsa
+install:
+- cd front
+- yarn
+script:
+- yarn build
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: cd .. && bash deploy.sh
+  on:
+    branch: master
