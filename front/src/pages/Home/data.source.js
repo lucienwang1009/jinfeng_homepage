@@ -34,7 +34,7 @@ export const Nav00DataSource = {
                 smooth={true} 
                 >
               <span>
-                <a color='red'>产品与服务</a>
+                <a>产品与服务</a>
               </span>
               </Link>
               ),
@@ -56,7 +56,7 @@ export const Nav00DataSource = {
                   smooth={true}
                   >
                 <span>
-                  <a color='red'>客户介绍</a>
+                  <a>客户介绍</a>
                 </span>
                 </Link>
               ),
@@ -78,7 +78,7 @@ export const Nav00DataSource = {
                   smooth={true}
                   >
                 <span>
-                  <a color='red'>团队介绍</a>
+                  <a>团队介绍</a>
                 </span>
                 </Link>
               ),
@@ -100,7 +100,7 @@ export const Nav00DataSource = {
                   smooth={true}
                   >
                 <span>
-                  <a color='red'>联系我们</a>
+                  <a>联系我们</a>
                 </span>
                 </Link>
           ),
@@ -432,7 +432,6 @@ export const Teams10DataSource = {
               name: 'content',
               className: 'teams1-job',
               children: '首席产品设计师',
-
             },
             {
               name: 'content1',
@@ -455,23 +454,11 @@ export const Content30DataSource = {
     children: [
       {
         name: '',
-        // children: (
-        // <span>
-        //   <p>&nbsp;团队介绍</p>
-        // </span>
-        // ),
         className: '',
       },
       {
         name: '',
         className: '',
-        // children: (
-        //   <span>
-        //     <span>
-        //       <p>湖南锦丰信息科技有限公司主要创始人介绍</p>
-        //     </span>
-        //   </span>
-        // ),
       },
     ],
   },

@@ -24,21 +24,20 @@ class Teams1 extends React.PureComponent {
     return (
       <div {...props} {...dataSource.wrapper}>
         <div {...dataSource.page}>
-        <div {...dataSource.titleWrapper}>
-          {dataSource.titleWrapper.children.map(getChildrenToRender)}
+          <div {...dataSource.titleWrapper}>
+            {dataSource.titleWrapper.children.map(getChildrenToRender)}
+          </div>
+          <OverPack {...dataSource.OverPack}>
+            <QueueAnim
+              type="bottom"
+              key="block"
+              leaveReverse
+              {...dataSource.block}
+              component={Row}>
+              {listChildren}
+            </QueueAnim>
+          </OverPack>
         </div>
-        <OverPack {...dataSource.OverPack}>
-          <QueueAnim
-            type="bottom"
-            key="block"
-            leaveReverse
-            {...dataSource.block}
-            component={Row}
-          >
-            {listChildren}
-          </QueueAnim>
-        </OverPack>
-      </div>
       </div>
     );
   }
