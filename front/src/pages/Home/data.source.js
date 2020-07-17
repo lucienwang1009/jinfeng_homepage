@@ -445,102 +445,7 @@ export const Teams10DataSource = {
     ],
   },
 };
-export const Content30DataSource = {
-  wrapper: { className: '' },
-  page: { className: '' },
-  OverPack: { playScale: 0.3 },
-  titleWrapper: {
-    className: '',
-    children: [
-      {
-        name: '',
-        className: '',
-      },
-      {
-        name: '',
-        className: '',
-      },
-    ],
-  },
-  block: {
-    className: '',
-    children: [
 
-      {
-        name: '',
-        className: '',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: { className: '', children: '' },
-          textWrapper: { className: '' },
-          title: {
-            className: '',
-            children: (
-              <span>
-                <span>
-                  <p>
-                    <br />
-                  </p>
-                </span>
-              </span>
-            ),
-          },
-          content: {
-            className: '',
-            children: (
-              <span>
-                <p>
-                  <br />
-                </p>
-              </span>
-            ),
-          },
-        },
-      },
-      {
-        name: '',
-        className: '',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: '',
-            // children:
-            //   'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png',
-          },
-          textWrapper: { className: '' },
-          title: { className: '', },
-          content: {
-            className: '',
-            // children:
-            //   '金融级联机交易处理中间件，大规模分布式计算机，数万笔/秒级并发能力，严格保证交易数据统一性。',
-          },
-        },
-      },
-      {
-        name: '',
-        className: '',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: '',
-            // children:
-            //   'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png',
-          },
-          textWrapper: { className: '' },
-          title: { className: '', children: '' },
-          content: {
-            className: '',
-            // children:
-            //   '一站式、全周期大数据协同工作平台，PB级数据处理、毫秒级数据分析工具。',
-          },
-        },
-      },
-    ],
-  },
-};
 export const Footer10DataSource = {
   wrapper: { className: 'home-page-wrapper footer1-wrapper' },
   OverPack: { className: 'footer1', playScale: 0.2 },
@@ -556,56 +461,15 @@ export const Footer10DataSource = {
         title: {
           className: 'logo',
           children:
-            'https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg',
+            '',
         },
         childWrapper: {
-          className: 'slogan',
+          className: '',
           children: [
             {
               name: 'content0',
-              children: 'Animation specification and components of Ant Design.',
+              children: '',
             },
-          ],
-        },
-      },
-      {
-        name: 'block1',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: { children: '产品' },
-        childWrapper: {
-          children: [
-            { name: 'link0', href: '#', children: '产品更新记录' },
-            { name: 'link1', href: '#', children: 'API文档' },
-            { name: 'link2', href: '#', children: '快速入门' },
-            { name: 'link3', href: '#', children: '参考指南' },
-          ],
-        },
-      },
-      {
-        name: 'block2',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: { children: '关于' },
-        childWrapper: {
-          children: [
-            { href: '#', name: 'link0', children: 'FAQ' },
-            { href: '#', name: 'link1', children: '联系我们' },
-          ],
-        },
-      },
-      {
-        name: 'block3',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: { children: '资源' },
-        childWrapper: {
-          children: [
-            { href: '#', name: 'link0', children: 'Ant Design' },
-            { href: '#', name: 'link1', children: 'Ant Motion' },
           ],
         },
       },
@@ -644,16 +508,4 @@ export const Footer10DataSource = {
       )
     ],
   },
-  // copyleftWrapper: { className: 'copyleft-wrapper' },
-  // copyleftPage: { className: 'home-page' },
-  // copyleft: {
-  //   className: 'copyleft',
-  //   children: (
-  //     <span>
-  //       © 锦丰信息科技有限公司<a href="https://motion.ant.design" >联系我们</a> All Rights
-  //       Reserved
-  //     </span>
-
-  //   ),
-  // },
 };
