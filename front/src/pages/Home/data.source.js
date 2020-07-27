@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Input } from 'antd';
+
+import { UserOutlined } from '@ant-design/icons';
+import ReactDom from 'react-dom';
 const HeadImageWrap = styled.div`
   & img{
     width: 180px;
@@ -31,14 +33,14 @@ export const Nav00DataSource = {
             {
               children: [
                 (
-                <Link 
-                to="Content0_0"
-                smooth={true} 
-                >
-              </Link>
-              ),( <span>
-                <p>产品与服务</p>
-              </span>)
+                  <Link
+                    to="Content0_0"
+                    smooth={true}
+                  >
+                  </Link>
+                ), (<span>
+                  <p>产品与服务</p>
+                </span>)
               ],
               name: 'text',
             },
@@ -54,17 +56,17 @@ export const Nav00DataSource = {
             {
               children: [
                 (
-                <Link 
-                  to="Teams0_0"
-                  smooth={true}
+                  <Link
+                    to="Teams0_0"
+                    smooth={true}
                   >
-                </Link>
+                  </Link>
                 ),
                 (
-                 <span>
-                  <p>客户介绍</p>
-                 </span>)
-                 ],
+                  <span>
+                    <p>客户介绍</p>
+                  </span>)
+              ],
               name: 'text',
             },
           ],
@@ -74,54 +76,54 @@ export const Nav00DataSource = {
         name: 'item2',
         className: 'header0-item',
         children: {
-        //  href: '#Teams1_0',
+          //  href: '#Teams1_0',
           children: [
             {
-              children:[(
-                <Link 
+              children: [(
+                <Link
                   to="Teams1_0"
                   smooth={true}
-                  >
+                >
                 </Link>
-               
+
               ),
-            ( <span>
-              <p>团队介绍</p>
-              </span>)] ,
+              (<span>
+                <p>团队介绍</p>
+              </span>)],
               name: 'text',
             },
           ],
         },
       },
       {
-      name: 'item3',
-      className: 'header0-item',
-      children: {
-       // href: '#',
-        children: [
-          {
-            children: [
-            (<Link 
-              to="Teams0_0"
-              smooth={true}
-              >
-            </Link>     
-           ),
-            (
-             <span>
-                <p>联系我们</p>
-              </span>
-            ),
-          
+        name: 'item3',
+        className: 'header0-item',
+        children: {
+          // href: '#',
+          children: [
+            {
+              children: [
+                (<Link
+                  to="Content3_0"
+                  smooth={true}
+                >
+                </Link>
+                ),
+                (
+                  <span>
+                    <p>联系我们</p>
+                  </span>
+                ),
+
+              ],
+              name: 'text'
+
+            },
           ],
-          name: 'text'    
-           
-         },
-        ],
+        },
       },
-    },
-  ],
-},
+    ],
+  },
   mobileMenu: { className: 'header0-mobile-menu' },
 };
 export const Banner01DataSource = {
@@ -455,32 +457,6 @@ export const Teams10DataSource = {
     ],
   },
 };
-export const Content30DataSource = {
-  wrapper: { className: 'home-page-wrapper content3-wrapper' },
-  page: { className: 'home-page content3' },
-  OverPack: { playScale: 0.3, className: 'content3' },
-  titleWrapper: {
-    className: 'title-wrapper',
-    children: [{ name: 'title', children: '联系我们' }],
-  },
-  childWrapper: {
-    className: 'content3-block-wrapper',
-    children: [
-      {
-        name:"block",
-        className:"content3-block",
-        children:{
-          className:"content3-block-textbox",
-          children:
-            <input>姓名</input>,
-          children:
-            <input>联系方式</input>,
-        }
-      }
-      
-    ]
-  },
-};
 
 export const Footer10DataSource = {
   wrapper: { className: 'home-page-wrapper footer1-wrapper' },
@@ -492,20 +468,20 @@ export const Footer10DataSource = {
     children: [
       {
         name: "copyright1",
-        children:(
-        <span>
-          ©2020 by <a href="https://xin.baidu.com/company_detail_31243928268318?rq=ef&pd=ee&from=ps" >锦丰科技</a> All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        children: (
+          <span>
+            ©2020 by <a href="https://xin.baidu.com/company_detail_31243928268318?rq=ef&pd=ee&from=ps" >锦丰科技</a> All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <a href="https://map.baidu.com/search/%E6%B9%96%E5%8D%97%E7%9C%81%E6%A0%AA%E6%B4%B2%E5%B8%82%E7%9F%B3%E5%B3%B0%E5%8C%BA%E7%94%B0%E5%BF%83%E9%AB%98%E7%A7%91%E5%9B%AD/@12593195.084661353,3216495.1950000003,14.91z?querytype=s&wd=%E6%B9%96%E5%8D%97%E7%9C%81%E6%A0%AA%E6%B4%B2%E5%B8%82%E7%9F%B3%E5%B3%B0%E5%8C%BA%E7%94%B0%E5%BF%83%E9%AB%98%E7%A7%91%E5%9B%AD&c=131&pn=0&device_ratio=2&da_src=shareurl" >公司地址：</a> 湖南省株洲市石峰区田心高科园 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://map.baidu.com/search/%E6%B9%96%E5%8D%97%E7%9C%81%E6%A0%AA%E6%B4%B2%E5%B8%82%E7%9F%B3%E5%B3%B0%E5%8C%BA%E7%94%B0%E5%BF%83%E9%AB%98%E7%A7%91%E5%9B%AD/@12593195.084661353,3216495.1950000003,14.91z?querytype=s&wd=%E6%B9%96%E5%8D%97%E7%9C%81%E6%A0%AA%E6%B4%B2%E5%B8%82%E7%9F%B3%E5%B3%B0%E5%8C%BA%E7%94%B0%E5%BF%83%E9%AB%98%E7%A7%91%E5%9B%AD&c=131&pn=0&device_ratio=2&da_src=shareurl" >公司地址：</a> 湖南省株洲市石峰区田心高科园 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            公司联系方式： 0731-22161180
-        </span>
+          </span>
         ),
       },
-    ] 
+    ]
   },
 };

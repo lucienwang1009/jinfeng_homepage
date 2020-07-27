@@ -1,94 +1,117 @@
 import React from 'react';
-import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
-import { Row, Col } from 'antd';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { getChildrenToRender } from './utils';
+import { Row, Col, Form, Input, Button, Checkbox } from 'antd';
 
-class Content3 extends React.PureComponent {
-  getDelay = (e, b) => (e % b) * 100 + Math.floor(e / b) * 100 + b * 100;
+const layout = {
+  labelCol: {
+    span: 5,
+  },
+  wrapperCol: {
+    span: 16,
+  },
+};
+const tailLayout = {
+  wrapperCol: {
+    offset: 8,
+    span: 16,
+  },
+};
 
-  render() {
-    const { ...props } = this.props;
-    const { dataSource, isMobile } = props;
-    delete props.dataSource;
-    delete props.isMobile;
-    let clearFloatNum = 0;
-    const children = dataSource.block.children.map((item, i) => {
-      const childObj = item.children;
-      const delay = isMobile ? i * 50 : this.getDelay(i, 24 / item.md);
-      const liAnim = {
-        opacity: 0,
-        type: 'from',
-        ease: 'easeOutQuad',
-        delay,
-      };
-      const childrenAnim = { ...liAnim, x: '+=10', delay: delay + 100 };
-      clearFloatNum += item.md;
-      clearFloatNum = clearFloatNum > 24 ? 0 : clearFloatNum;
-      return (
-        <TweenOne
-          component={Col}
-          animation={liAnim}
-          key={item.name}
-          {...item}
-          componentProps={{ md: item.md, xs: item.xs }}
-          className={
-            !clearFloatNum
-              ? `${item.className || ''} clear-both`.trim()
-              : item.className
-          }
-        >
-          <TweenOne
-            animation={{
-              x: '-=10',
-              opacity: 0,
-              type: 'from',
-              ease: 'easeOutQuad',
+const Content3 = (props) => {
+  const onFinish = values => {
+    console.log('Success:', values);
+    location.href ="mailto:1416287214@qq.com ? &bcc= &subject=客户咨询&body=咨询详情:   姓名: "+values.name+"   联系方式: "+values.phone+"   所属公司名称: "+values.company+"   咨询内容: "+values.content
+  };
+
+  const onFinishFailed = errorInfo => {
+    console.log('Failed:', errorInfo);
+  };
+
+  return (
+    <div>
+        <Col span={12} offset={6}>
+          <div {...props} >
+          <h1 align='center'
+            style={
+              {
+                fontSize: 32,
+                marginBottom: 32,
+                color: 'rgba(0, 0, 0, 0.65)',
+              }
+            }
+          >联系我们</h1>
+          <Form  
+            {...layout}
+            name="basic"
+            initialValues={{
+              remember: true,
             }}
-            key="img"
-            {...childObj.icon}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
           >
-            <img src={childObj.icon.children} width="100%" alt="img" />
-          </TweenOne>
-          <div {...childObj.textWrapper}>
-            <TweenOne
-              key="h2"
-              animation={childrenAnim}
-              component="h2"
-              {...childObj.title}
+            <Form.Item
+              label="姓名"
+              name="name"
+              rules={[
+                {
+                  required: true,
+                  message: '请输入您的名字!',
+                },
+              ]}
             >
-              {childObj.title.children}
-            </TweenOne>
-            <TweenOne
-              key="p"
-              animation={{ ...childrenAnim, delay: delay + 200 }}
-              component="div"
-              {...childObj.content}
+              <Input />
+            </Form.Item>
+            <Form.Item
+              label="联系方式"
+              name="phone"
+              rules={[
+                {
+                  required: true,
+                  message: '请输入您的联系方式!',
+                },
+              ]}
             >
-              {childObj.content.children}
-            </TweenOne>
-          </div>
-        </TweenOne>
-      );
-    });
-    return (
-      <div {...props} {...dataSource.wrapper}>
-        <div {...dataSource.page}>
-          <div {...dataSource.titleWrapper}>
-            {dataSource.titleWrapper.children.map(getChildrenToRender)}
-          </div>
-          <OverPack {...dataSource.OverPack}>
-            <QueueAnim key="u" type="bottom">
-              <Row key="row" {...dataSource.block}>
-                {children}
-              </Row>
-            </QueueAnim>
-          </OverPack>
-        </div>
-      </div>
-    );
-  }
-}
+              <Input />
+            </Form.Item>
+
+            <Form.Item
+              label="所在公司名称"
+              name="company"
+              rules={[
+                {
+                  required: true,
+                  message: '请输入您所在的公司名称!',
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item
+              label="咨询内容"
+              name="content"
+              rules={[
+                {
+                  required: true,
+                  message: '请输入您的咨询内容!',
+                },
+              ]}
+            >
+              <Input.TextArea />
+            </Form.Item>
+
+            <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+              <Checkbox>是否保存用户信息</Checkbox>
+            </Form.Item>
+
+            <Form.Item {...tailLayout}>
+              <Button type="primary" htmlType="submit">
+                提交
+              </Button>
+            </Form.Item>
+          </Form>
+        </div></Col>
+    </div>
+  );
+};
 
 export default Content3;

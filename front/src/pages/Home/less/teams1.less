@@ -1,27 +1,23 @@
 @teams1: teams1;
 .@{teams1}-wrapper {
-  min-height: 500px;
+  min-height: 430px;
   overflow: hidden;
   .@{teams1} {
     overflow: hidden;
     height: 100%;
-    padding: 48px 12px;
+    padding: 24px 24px;
     > .title-wrapper {
-      margin: 0 auto 48px;
+      margin: 0 auto 38px;
     }
     .block-wrapper {
       position: relative;
-      height:500px;
+      height:400px;
       overflow: hidden;
       padding: 0px 0px 40px ;
       .block {
         display: inline-block;
         text-align: center;
-        margin-bottom: 24px;
-       
-        &.queue-anim-leaving {
-          position: relative !important;
-        }
+        margin-bottom: 12px;
       }
     }
     &-image, &-title, &-job, &-content {
@@ -51,6 +47,6 @@
 
 @media screen and (max-width: 767px) {
   .@{teams1}-wrapper {
-    min-height: 1440px;
+    min-height: 740px;
   }
 }

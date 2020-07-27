@@ -8,6 +8,7 @@ import Content0 from './Content0';
 import Teams1 from './Teams1';
 import Teams0 from './Teams0';
 import Footer1 from './Footer1';
+import Content3 from './Content3';
 import {
   Nav00DataSource,
   Banner01DataSource,
@@ -85,7 +86,12 @@ export default class Home extends React.Component {
         dataSource={Teams10DataSource}
         isMobile={this.state.isMobile}
       />,
-     
+      <Content3
+        id="Content3_0"
+        key="Content3_0"
+       // dataSource={Content30DataSource}
+        isMobile={this.state.isMobile}
+      />,
       <Footer1
         id="Footer1_0"
         key="Footer1_0"

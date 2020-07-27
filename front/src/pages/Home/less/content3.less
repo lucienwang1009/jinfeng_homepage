@@ -1,21 +1,23 @@
 @content3: content3;
 .@{content3}-wrapper {
-  min-height: 764px;
+  min-height: 600px;
   .@{content3} {
     height: 100%;
+    padding: 24px;
     overflow: hidden;
-    & .title-content {
-      text-align: center;
+    >.title-content {
+     text-align: left;
     }
-    &-block-wrapper {
-      position: relative;
+    .block-wrapper {
+      position: absolute;
       .@{content3}-block {
         display: inline-block;
-        padding: 48px 24px;
+        text-align: center;
+        padding: 24px 24px;
         vertical-align: top;
         .@{content3}-icon {
           display: inline-block;
-          width: 15%;
+          width: 50%;
           vertical-align: top;
         }
         .@{content3}-text {
@@ -31,16 +33,17 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 100%) {
   .@{content3}-wrapper {
-    min-height: 1080px;
+    min-height: 80px;
     .@{content3} {
       &-block-wrapper {
         margin: 20px auto;
         height: auto;
+        text-align: center;
         .@{content3}-block {
           .@{content3}-title {
-            font-size: 20px;
+            font-size: 40px;
           }
           &.queue-anim-leaving {
             position: relative !important;
